@@ -2,7 +2,7 @@ class Notification:
     def send(self):
         print("Sending Notification")
 
-class EmailNotifiation(Notification):
+class EmailNotification(Notification):
 
     def __init__(self, recipient, subject):
         self.recipient = recipient
@@ -31,13 +31,13 @@ class PushNotification(Notification):
         super().send()
         print("Pushing Notification\n")
 
-notifications = [EmailNotifiation("Nihar", "IDK"), SMSNotification(9595212305), PushNotification(12, "Whatsapp")]
+notifications = [EmailNotification("Nihar", "IDK"), SMSNotification(9595212305), PushNotification(12, "Whatsapp")]
 for i in notifications:
     i.send()
 
 def notify(notificate):
     notificate.send()
 
-notify(EmailNotifiation("Nihar", "IDK"))
+notify(EmailNotification("Nihar", "IDK"))
 notify(SMSNotification(9595212305))
 notify(PushNotification(35, "Youtube"))
