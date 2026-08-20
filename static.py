@@ -1,4 +1,5 @@
 class Chai:
+    @staticmethod   
     def clean(text):
         return [items.strip() for items in text.split(",")]
 raw = "water  , ginger, milk   ,  honey"
